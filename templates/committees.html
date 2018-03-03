@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head_title %} Committees {% endblock %}
+
+{% block content %}
+    <div class="container mt-3">
+      
+      <h1>Committees</h1>
+
+    <div class="row">
+      {% for committee in committees %}
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            {{ committee }}
+          </div>
+          <ul class="list-group list-group-flush">
+            {% for member in committee.members.all %}
+              <li class="list-group-item">{{member}} - {{member.first_name}} {{member.last_name}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+      
+
+    </div>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+    
+{% endblock %}
