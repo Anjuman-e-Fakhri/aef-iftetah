@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'import_export',
     'rest_framework',
+    'crispy_forms',
     'tasks',
 
 ]
@@ -132,3 +133,8 @@ REST_FRAMEWORK = {
     ]
 }
 
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = 'tasks'
+LOGOUT_REDIRECT_URL = 'tasks'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
