@@ -9,12 +9,21 @@
 
     <div class="row">
       {% for committee in committees %}
-      <div class="col">
+      <div class="col-3 mt-3">
         <div class="card">
           <div class="card-header">
-            {{ committee }}
+            <h5 class="text-center">{{ committee }}</h5>
           </div>
           <ul class="list-group list-group-flush">
+            {% for member in committee.heads.all %}
+              <li class="list-group-item list-group-item-warning">
+                  <div class="d-flex w-100 justify-content-between">
+                      <h6 class="mb-1">{{member.first_name}} {{member.last_name}}</h6>
+                      <small>{{member}}</small>
+                  </div>
+              </li>
+
+            {% endfor %}
             {% for member in committee.members.all %}
               <li class="list-group-item">{{member}} - {{member.first_name}} {{member.last_name}}</li>
             {% endfor %}
