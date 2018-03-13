@@ -15,7 +15,7 @@ class TaskResource(resources.ModelResource):
         model = Task
         skip_unchanged = True
         report_skipped = False
-        fields =('committee', 'description', 'status','due_date', 'assigned')
+        fields =('id', 'committee', 'description', 'status','due_date', 'assigned')
 
 class TaskAdmin(ImportExportModelAdmin):
     list_display = ['description','committee', 'status','due_date', 'assigned']
