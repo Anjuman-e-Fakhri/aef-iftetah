@@ -8,6 +8,9 @@ class Committee(models.Model):
     heads = models.ManyToManyField(User, related_name="heads", blank=True)
     members = models.ManyToManyField(User, related_name="members", blank=True)
 
+    class Meta:
+        ordering = ['name']
+
     def __str__(self):
         return self.name
 

@@ -25,7 +25,12 @@
 
             {% endfor %}
             {% for member in committee.members.all %}
-              <li class="list-group-item">{{member}} - {{member.first_name}} {{member.last_name}}</li>
+              <li class="list-group-item">
+                  <div class="d-flex w-100 justify-content-between">
+                      <h6 class="mb-1">{{member.first_name}} {{member.last_name}}</h6>
+                      <small>{{member}}</small>
+                  </div>
+              </li>
             {% endfor %}
           </ul>
         </div>

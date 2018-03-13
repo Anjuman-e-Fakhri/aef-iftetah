@@ -15,12 +15,12 @@ class TaskResource(resources.ModelResource):
         model = Task
         skip_unchanged = True
         report_skipped = False
-        fields =('committee', 'description', 'status','due_date')
+        fields =('committee', 'description', 'status','due_date', 'assigned')
 
 class TaskAdmin(ImportExportModelAdmin):
-    list_display = ['description','committee', 'status','due_date']
-    list_filter = ['committee', 'status']
-    search_fields = ['committee', 'description', 'status','due_date']
+    list_display = ['description','committee', 'status','due_date', 'assigned']
+    list_filter = ['committee', 'status', 'assigned']
+    search_fields = ['committee', 'description', 'status','due_date', 'assigned']
     resource_class = TaskResource
 
 admin.site.register(Task, TaskAdmin)

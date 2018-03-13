@@ -56,7 +56,7 @@
               <td><input class="form-control" v-model="newTask.due_date"></td>
               <td><input class="form-control" v-model="newTask.assigned"></td>
               <td>
-                <button @click="filterTask = null" class="btn btn-sm btn-danger py-0">cancel</button>
+                <button @click="filterTask = null" class="btn btn-sm btn-danger py-0">close</button>
               </td>
 
           </tr>
@@ -113,7 +113,7 @@
             </template>
             <template v-else>
               <td scope="row">((i + 1))</td>
-              <td>((task.description))</td>
+              <td class="">((task.description))</td>
               <td>((task.committee))</td>
               <td>((task.status))</td>
               <td>((task.due_date))</td>

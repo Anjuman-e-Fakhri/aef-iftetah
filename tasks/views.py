@@ -11,7 +11,7 @@ from .models import Task, Committee
 def tasks(request):
     return render(request, "tasks.html", {})
 
-
+@login_required
 def committees(request):
     committees = Committee.objects.all()
     context = {
