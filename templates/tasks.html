@@ -36,7 +36,7 @@
         <tbody>
           <tr v-if="filterTask" class="text-center table-secondary">
             <td><i class="fas fa-filter pt-2"></i></td>
-            <td><input class="form-control" v-model="newTask.description"></td>
+            <td><input class="form-control disabled" v-model="newTask.description"></td>
               <td>
                 <select class="form-control" v-model="selectedCommittees" multiple="">
                 	<option value="All">All</option>
@@ -46,15 +46,15 @@
                 </select>
               </td>
               <td>
-                <select class="form-control" v-model="newTask.status">
+                <select class="form-control disabled" v-model="newTask.status">
                     <option value="All">All</option>
                     <option value="Pending">Pending</option>
                     <option value="In Progress">In Progress</option>
                     <option value="Completed">Completed</option>
                 </select>
               </td>
-              <td><input class="form-control" v-model="newTask.due_date"></td>
-              <td><input class="form-control" v-model="newTask.assigned"></td>
+              <td><input class="form-control disabled" v-model="newTask.due_date"></td>
+              <td><input class="form-control disabled" v-model="newTask.assigned"></td>
               <td>
                 <button @click="filterTask = null" class="btn btn-sm btn-danger py-0">close</button>
               </td>
